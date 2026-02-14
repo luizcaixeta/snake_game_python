@@ -77,3 +77,12 @@ def move_snake(self, dx: int, dy: int):
 
         current = current.next 
 
+# retrona True se algum segmento da cobra está em (x, y), caso contrário retorna False
+def snake_contains(snake: Snake, x: int, y: int):
+    current = snake.head 
+    while current is not None:
+        if current.x == x and current.y == y:
+            return True 
+        current = current.next 
+    
+    return False 
